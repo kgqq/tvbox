@@ -1,3 +1,5 @@
+# 不好用！！
+
 # IPTV 自动更新直播源生成器 (Cloudflare Workers)
 
 每日自动拉取 [iptv-org](https://iptv-org.github.io/api/) 直播源，自动验证有效性，缓存到 Cloudflare KV，支持：
