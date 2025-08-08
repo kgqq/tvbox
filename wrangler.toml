@@ -1,0 +1,9 @@
+name = "iptv-auto-updater"
+main = "worker.js"
+compatibility_date = "2025-08-08"
+
+kv_namespaces = [
+  { binding = "LIVE_SOURCES", id = "88ff221fc7a6421581367b4455cec50e" }
+]
+
+triggers = { crons = ["0 4 * * *"] }
