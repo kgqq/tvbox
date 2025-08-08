@@ -55,12 +55,22 @@ async function updateLiveSources(env) {
  */
 async function checkUrlAlive(url) {
   try {
-    const res = await fetch(url, { method: "HEAD", redirect: "follow" });
-    return res.ok && res.headers.get("content-type")?.includes("video");
+    // 换成简单请求，只判断状态码即可
+    const res = await fetch(url, { method: "GET", redirect: "follow" });
+    return res.ok;
   } catch {
     return false;
   }
 }
+
+// async function checkUrlAlive(url) {
+//   try {
+//     const res = await fetch(url, { method: "HEAD", redirect: "follow" });
+//     return res.ok && res.headers.get("content-type")?.includes("video");
+//   } catch {
+//     return false;
+//   }
+// }
 
 /**
  * 返回用户请求的 M3U 或 TVBox JSON
